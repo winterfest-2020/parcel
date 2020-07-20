@@ -1,0 +1,37 @@
+{
+    "name": "gh.midi-cli",
+    "version": "0.0.0",
+    "description": "CLI for gh.midi",
+    "bin": {
+        "gh.midi": "./cli"
+    },
+    "scripts": {
+        "test": "ava"
+    },
+    "eslintConfig": {
+        "extends": "@gmartigny/eslint-config"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GMartigny/gh.midi-cli.git"
+    },
+    "keywords": [
+        "music"
+    ],
+    "author": "GMartigny",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/GMartigny/gh.midi-cli/issues"
+    },
+    "homepage": "https://github.com/GMartigny/gh.midi-cli#readme",
+    "dependencies": {
+        "gh.midi": "^2.0.0",
+        "meow": "^7.0.1"
+    },
+    "devDependencies": {
+        "@gmartigny/eslint-config": "^1.5.0",
+        "ava": "^3.10.1",
+        "eslint": "^7.5.0",
+        "execa": "^4.0.3"
+    }
+}

@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+const { writeFileSync } = require("fs");
+const meow = require("meow");
+const GHmidi = require("gh.midi");
+
+const cli = meow(`
+    Usage
+        $ gh.midi <Username>
+        
+    Options
+        --days, -d      <nbDays>        Number of days to includes
+        --chords, -c    <chordsList>    Coma separated set of 4 chords
+        --filename, -f  <fileName>      Name of the output file
+    
+    Example
+        gh.midi GMartigny --days 100 --chords a,b,c,d --output.midi
+`, {
+    flags: {
+        days: {
+            type: "string",
+            alias: "d",
+        },
+        chords: {
+            type: "string",
+            alias: "c",
+        },
+        filename: {
+            type: "string",
+            alias: "f",
+        },
+    },
+});
+
+const run = async (username, options) => {
+    if (!username) {
+        cli.showHelp();
+        return;
+    }
+
+    if (options.chords) {
+        options.chords = options.chords.split(",");
+    }
+
+    try {
+        const bytes = await GHmidi(username, options);
+        const fileName = options.filename || `${username}.midi`;
+        writeFileSync(fileName, bytes, "binary");
+        console.log(`Done creating ${fileName}.`);
+    }
+    catch (error) {
+        console.error(error.message);
+    }
+};
+
+run(cli.input[0], cli.flags);
