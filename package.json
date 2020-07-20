@@ -1,6 +1,6 @@
 {
     "name": "gh.midi-cli",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "CLI for gh.midi",
     "bin": {
         "gh.midi": "./cli"
