@@ -3,7 +3,7 @@
     "version": "1.0.1",
     "description": "CLI for gh.midi",
     "bin": {
-        "gh.midi": "./cli"
+        "gh.midi": "cli"
     },
     "scripts": {
         "test": "ava"
@@ -25,13 +25,13 @@
     },
     "homepage": "https://github.com/GMartigny/gh.midi-cli#readme",
     "dependencies": {
-        "gh.midi": "^2.0.0",
-        "meow": "^7.0.1"
+        "gh.midi": "^2.1.0",
+        "meow": "^8.0.0"
     },
     "devDependencies": {
-        "@gmartigny/eslint-config": "^1.5.0",
-        "ava": "^3.10.1",
-        "eslint": "^7.5.0",
-        "execa": "^4.0.3"
+        "@gmartigny/eslint-config": "^1.6.0",
+        "ava": "^3.13.0",
+        "eslint": "^7.13.0",
+        "execa": "^4.1.0"
     }
 }
