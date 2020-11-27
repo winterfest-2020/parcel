@@ -4,6 +4,7 @@
 
 CLI for [gh.midi](https://github.com/GMartigny/gh.midi)
 
+
 ## Installation
 
     npm install gh.midi-cli
@@ -22,6 +23,7 @@ It will create a file named `<username>.midi`
 
  - `--days`, `-d` Number of days to includes
  - `--chords`, `-c` Coma separated set of 4 chords
+ - `--bpm`, `-b` Speed of the song
  - `--filename`, `-f` Name of the output file
 
 

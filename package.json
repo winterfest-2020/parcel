@@ -25,7 +25,7 @@
     },
     "homepage": "https://github.com/GMartigny/gh.midi-cli#readme",
     "dependencies": {
-        "gh.midi": "^2.1.0",
+        "gh.midi": "^2.2.0",
         "meow": "^8.0.0"
     },
     "devDependencies": {
